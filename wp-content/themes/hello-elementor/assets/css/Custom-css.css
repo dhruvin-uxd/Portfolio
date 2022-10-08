@@ -93,7 +93,7 @@ End of comment */
 }
 
 
-//for sticky header on scroll
+/*for sticky header on scroll*/
 #header[data-scroll="out"] {
   transform: translatey(-100%);
 }
@@ -104,15 +104,25 @@ End of comment */
 }
 
 
-//form
+/*form*/
 
-.form.post-password-form {
+form.post-password-form {
     justify-content: center;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
 }
 
 .post-password-form p {
 justify-content: center;
+}
+
+
+input#pwbox-1573 {
+  margin-top: 10px;
+}
+
+input[type="submit"] {
+  margin-left: 10px !important;
 }
