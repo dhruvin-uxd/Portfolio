@@ -17,7 +17,7 @@ End of comment */
   height: auto;
 }
 #main-header-menu .resume-btn {
-  	background:#242424;
+  	background:#000;
 	border:1px solid #3E3D3D;
 	transition:all 0.5s ease;
 }
@@ -72,7 +72,7 @@ End of comment */
 	  display:none;
 }
 }
-.marquee {
+/* .marquee {
   position: relative;
   width: 100vw;
   max-width: 100%;
@@ -90,7 +90,7 @@ End of comment */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
-}
+} */
 
 
 /*for sticky header on scroll*/
@@ -125,4 +125,8 @@ input#pwbox-1573 {
 
 input[type="submit"] {
   margin-left: 10px !important;
+}
+
+#site-footer {
+  display: none !important;
 }
