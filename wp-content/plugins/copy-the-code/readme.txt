@@ -2,14 +2,14 @@
 Contributors: Mahesh901122, freemius
 Donate link: https://www.paypal.me/mwaghmare7/
 Tags: Copy, Paste, Copy to Clipboard, Clipboard, Copy Anything to Clipboard
-Tested up to: 6.0.1
-Stable tag: 2.6.1
+Tested up to: 6.1.1
+Stable tag: 2.6.2
 Requires PHP: 5.6
 Requires at least: 4.4
 
 == Description ==
 
-**Copy Anything to Clipboard** is the #1 WordPress plugin with **75,000+** downloads 🚀
+**Copy Anything to Clipboard** is the #1 WordPress plugin with **90,000+** downloads 🚀
 
 You can use plugin to copy anything including:
 
@@ -125,6 +125,12 @@ Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pi
 1. Install the <code>Copy Anything to Clipboard</code> plugin either via the WordPress plugin directory, or by uploading the files to your server at <code>wp-content/plugins</code>.
 
 == Changelog ==
+
+= 2.6.2 =
+
+* Improvement: Compatibility to WordPress 6.1.1.
+* Improvement: Updated Freemius SDK wit version 2.5.3.
+* Improvement: Added the support to copy emojis from the content into the clipboard.
 
 = 2.6.1 =
 

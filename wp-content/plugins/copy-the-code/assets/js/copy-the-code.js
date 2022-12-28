@@ -335,6 +335,23 @@ window.CopyTheCodeToClipboard = (function (window, document, navigator) {
                 // Remove the <copy> button.
                 html = html.replace(buttonMarkup, '');
 
+                // Emojis.
+                let allEmojis = CopyTheCode._getImages( html );
+
+                if ( allEmojis ) {
+                    allEmojis.map( function(image) {
+                        let alt = CopyTheCode._getAlt( image );
+                        if ( alt ) {
+                            let cleanAlt = alt[0];
+                            cleanAlt = cleanAlt.replaceAll( '"', '' );
+                            cleanAlt = cleanAlt.replaceAll( "'", '' );
+                            cleanAlt = cleanAlt.replaceAll( 'alt=', '' );
+                            html = html.replaceAll( image, cleanAlt );
+                        }
+                    });
+
+                }
+
                 // Remove all duplicate empty lines.
                 if( copyTheCode.remove_spaces ) {
                     html = html.replace(/^(?=\n)$|\s*$|\n\n+/gm,"");
@@ -388,9 +405,7 @@ window.CopyTheCodeToClipboard = (function (window, document, navigator) {
                 $("body").append(tempPre);
 
                 // Set temporary HTML markup.
-                tempPre.html(tempHTML);
-
-                var content = tempPre.html();
+                var content = tempPre.html(tempHTML).text();
 
                 content = $.trim(content);
 
@@ -398,7 +413,7 @@ window.CopyTheCodeToClipboard = (function (window, document, navigator) {
                 temp.val(content).select();
 
                 // Support for IOS devices too.
-                CopyTheCodeToClipboard.copy(html);
+                CopyTheCodeToClipboard.copy(content);
 
                 // Remove temporary elements.
                 temp.remove();
@@ -414,7 +429,16 @@ window.CopyTheCodeToClipboard = (function (window, document, navigator) {
                     btn.text(oldText);
                 }
             }, 1000);
+        },
+
+        _getImages( content ) {
+            return content.match( /<img\s+[^>]*?src=("|')([^"']+)">/gi );
+        },
+
+        _getAlt( img ) {
+            return img.match( /alt=("|')([^"']+)"|'/gi );
         }
+
     };
 
     /**
