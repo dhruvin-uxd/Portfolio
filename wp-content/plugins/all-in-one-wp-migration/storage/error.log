@@ -1,0 +1,6 @@
+Dec 30 2022 07:02:53
+{"Number":8192,"Message":"base64_encode(): Passing null to parameter #1 ($string) of type string is deprecated","File":"C:\\xampp\\htdocs\\dhruvin\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\export\\class-ai1wm-export-config.php","Line":164}
+
+Dec 30 2022 07:03:17
+{"type":8192,"message":"Return type of Requests_Utility_CaseInsensitiveDictionary::getIterator() should either be compatible with IteratorAggregate::getIterator(): Traversable, or the #[\\ReturnTypeWillChange] attribute should be used to temporarily suppress the notice","file":"C:\\xampp\\htdocs\\dhruvin\\wp-includes\\Requests\\Utility\\CaseInsensitiveDictionary.php","line":91}
+
